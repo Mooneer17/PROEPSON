@@ -20,16 +20,17 @@
     </header>
 
     <main>
-        <section class="slider">
-            <div class="slider-cards">
-                <div id="card-1" class="card">A</div>
-            </div>
-            <div class="slider-buttons">
-                <button class="previous">Prev</button>
-                <button class="next">Next</button>
+        <div class="slider">
+                <span class="slider-content" data-index="0" data-status="active">A</span>
+                <span class="slider-content" data-index="1" data-status="unknown">B</span>
+                <span class="slider-content" data-index="2" data-status="unknown">C</span>
+                <span class="slider-content" data-index="3" data-status="unknown">D</span>
+                <div class="uibuttons">
+                  <button id="prevButton" onclick="handlePrev()"><</button>
+                  <button id="nextButton" onclick="handleNext()">></button>
             </div>
         
-        </section>
     </main>
 </body>
+<script src="script.js"></script>
 </html>
