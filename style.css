@@ -4,26 +4,132 @@
 }
 
 body{
-    background-color: #050505;
-    font-family: Arial, sans-serif;
+    background-color: #191919;
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
     height: 10vh;
-    color: white;
+    color: #F8F8F8;
 }
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 5%;
+
+}
+
 .logo{
-    font-size: 2rem;
+    font-size: 2.4rem;
+    font-weight: bold;
 }
 
 .search-bar{
     border-radius: 20px;
-    height: 2rem;
-    padding: 5%;
+    border: none;
+    padding: 1rem;
+    flex: 0.7;
+    transition: all 0.3s ease;
+}
+
+.search-bar:hover{
+    box-shadow: 0 0 10px 0.1px #F8F8F8;
 }
 
 
+.user-links{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
 .user-links a{
     color: white;
-    text-decoration: none;  
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.user-links a:nth-child(1):hover{
+    color: #2C5DFF;
+}
+
+.user-links a:nth-child(2):hover{
+    color: #E700E7;
+}
+
+.user-links a:nth-child(3):hover{
+    color: #FCE700;
+}
+
+.slider{
+    display: flex;
+    color: rgb(226, 226, 226);
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #E700E7;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: #2C5DFF;   
+    display: flex;           
+    justify-content: center;
+    align-items: center; 
+    animation: translateXInfinite 3s ease-in-out infinite;
+    
+}
+
+
+@keyframes translateXInfinite {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+.slider-buttons{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.slider-buttons button{
+    background-color: #f1f1f1;
+    border: none;
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.slider-buttons button:hover{
+    background-color: #cc00cc;
+    box-shadow: 0 0 10px 0.1px #ff12d8;
+    color: rgb(221, 221, 221);
+
 }
