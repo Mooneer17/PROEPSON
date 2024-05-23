@@ -34,16 +34,16 @@ document.addEventListener("DOMContentLoaded", function() {
       discountItem.addEventListener('click', function() {
         discountItems.forEach(otherDiscountItem => {
           if (otherDiscountItem !== discountItem) {
-            otherDiscountItem.classList.remove('expanded');
+            otherDiscountItem.classList.remove('expand');
             otherDiscountItem.setAttribute('data-status', 'compress');
           }
         });
         
-        if (discountItem.classList.contains('expanded')) {
-          discountItem.classList.remove('expanded');
+        if (discountItem.classList.contains('expand')) {
+          discountItem.classList.remove('expand');
           discountItem.setAttribute('data-status', 'default');
         } else {
-          discountItem.classList.add('expanded');
+          discountItem.classList.add('expand');
           discountItem.setAttribute('data-status', 'expand');
         }
       });
