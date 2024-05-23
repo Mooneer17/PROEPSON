@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+
+}
+
+body{
+    background-color: #ececec;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+
+header{
+    background-color: rgb(245, 245, 245);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.user-navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.shopping-navbar{
+    width: 100%;
+    background-color: black;
+}
+
+.shopping-navbar ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.shopping-navbar ul li{
+    margin: 0 1rem;
+}
+
+.shopping-navbar ul li a{
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.bestproducts-slider{
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.categories-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+}
+
+
+
+.discount-box{
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem;
+}
+
+.discount-container{
+    display: flex;
+}
+
+.discount-box h1{
+    color: rgb(29, 29, 29);
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 4rem;
+    font-weight: 1000;
+    font-style: italic;
+}
+.discount-item{
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+    color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.discount-item #index{
+    font-size: 2rem;
+    font-weight: 800;
+    font-style: oblique;
+    text-align: left;
+}
+.discount-item img{
+    width: 100%;   
+}
+
+
+
+
+
+
+
+
