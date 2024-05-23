@@ -25,3 +25,27 @@ const handlePrev = () => {
 
 document.getElementById('prev').addEventListener('click', handlePrev);
 document.getElementById('next').addEventListener('click', handleNext);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const discountItems = document.querySelectorAll('.discount-item');
+    
+    discountItems.forEach(discountItem => {
+      discountItem.addEventListener('click', function() {
+        discountItems.forEach(otherDiscountItem => {
+          if (otherDiscountItem !== discountItem) {
+            otherDiscountItem.classList.remove('expanded');
+            otherDiscountItem.setAttribute('data-status', 'compress');
+          }
+        });
+        
+        if (discountItem.classList.contains('expanded')) {
+          discountItem.classList.remove('expanded');
+          discountItem.setAttribute('data-status', 'default');
+        } else {
+          discountItem.classList.add('expanded');
+          discountItem.setAttribute('data-status', 'expand');
+        }
+      });
+    });
+  });
