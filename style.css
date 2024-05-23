@@ -25,11 +25,13 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
+
 }
 
 .shopping-navbar{
     width: 100%;
     background-color: black;
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.7);
 }
 
 .shopping-navbar ul{
@@ -55,7 +57,94 @@ main{
 .bestproducts-slider{
     background-color: rgb(20, 20, 20);
     color: white;
+    padding: 3rem;
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.7);
 }
+
+.slider-content{
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-index{
+    transform: translateX(70vw);
+    font-style: bold;
+    position: absolute;
+    text-align: right;
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+
+.slider-buttons button{
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    color: rgb(20, 20, 20);
+    padding: 1rem;
+    font-size: medium;
+    font-style: italic;
+    cursor: pointer;
+
+
+}
+
+
+.slider-buttons #buy{
+    box-shadow: 0 0 20px rgba(214, 214, 214, 0.7);
+    border: none ;
+}
+
+
+.slider-buttons #cart{
+    border: white 1px solid;
+    box-shadow: 0 0 20px rgba(230, 230, 230, 0.7);
+    background-color: rgb(20, 20, 20);
+    color: white;
+
+}
+
+.uibuttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    button{
+        background-color: rgb(255, 255, 255);
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+        color: rgb(20, 20, 20);
+        padding: 1rem;
+        font-size: 3rem;
+        font-style: italic;
+    }
+}
+
+button:hover{
+    box-shadow: 0 0 20px rgba(214, 214, 214, 0.7);
+}
+
+
+
+
+.slider-text h1{
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.slider-content img{
+    border-radius: 8px;
+    flex: 1;
+}
+
+
+
+
+
+
+
+
 
 .categories-grid{
     display: grid;
@@ -72,6 +161,7 @@ main{
     flex-direction: column;
     gap: 0.2rem;
     padding: 1rem;
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.7);
 }
 
 .discount-container{
@@ -105,8 +195,31 @@ main{
     font-style: oblique;
     text-align: left;
 }
+
+.discount-item .text{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.discount-item #category{
+    font-size: 1rem;
+}
+
+.discount-item #discount{
+    font-style: bold;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.discount-item #name, #ogprice, #disprice,#description{
+    display: none;
+}
+
 .discount-item img{
-    width: 100%;   
+    border-radius: 8px;
+    width: 100%;
+    flex:1;   
 }
 
 
