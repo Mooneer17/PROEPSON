@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.presentation{
+   display: flex;
+   flex-direction: column;
+   text-align: center; 
+   margin: 2rem 0rem;
+   background-color: aqua;
+   border-radius: 20px;
+}
+
+.presentation:hover{
+ animation: 1s opacity infinite ease ;
+}
+.presentation h1{
+    position: absolute;
+    font-size: 4rem;
+    padding: 1rem 50%;
+}
+
+.presentation p{
+    position: absolute;
+    color: antiquewhite;
+    margin: 12rem 2rem;
+
+}
+
+@keyframes opacity{
+    from{opacity: .4 ;
+
+    }
+    to{opacity: 1;
+
+    }
+}
