@@ -1,33 +1,27 @@
-let currentIndex=0;
-
-const box = document.getElementsByClassName('slider-content'); 
+let currentIndex = 0;
+const box = document.getElementsByClassName('slide');
 
 const handleNext = () => {
     const nextIndex = currentIndex + 1 <= box.length - 1 ? currentIndex + 1 : 0;
     const currentBox = document.querySelector(`[data-index="${currentIndex}"]`);
     const nextBox = document.querySelector(`[data-index="${nextIndex}"]`);
 
-
-    currentBox.dataset.status = 'active';
     currentBox.dataset.status = 'hide';
-    nextBox.dataset.status = 'next';
+    nextBox.dataset.status = 'active';
 
-
-    currentIndex = nextIndex;   
-
+    currentIndex = nextIndex;
 }
 
 const handlePrev = () => {
-    const nextIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : box.length - 1;
+    const prevIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : box.length - 1;
     const currentBox = document.querySelector(`[data-index="${currentIndex}"]`);
-    const nextBox = document.querySelector(`[data-index="${nextIndex}"]`);
+    const prevBox = document.querySelector(`[data-index="${prevIndex}"]`);
 
-
-    currentBox.dataset.status = 'unknown';
     currentBox.dataset.status = 'hide';
-    nextBox.dataset.status = 'next';
+    prevBox.dataset.status = 'active';
 
-
-    currentIndex = nextIndex;   
-
+    currentIndex = prevIndex;
 }
+
+document.getElementById('prev').addEventListener('click', handlePrev);
+document.getElementById('next').addEventListener('click', handleNext);

@@ -9,6 +9,7 @@
 <body>
     <header>
         <nav class="navbar">
+            <nav class="user-navbar">
             <div class="logo">PROEPSON</div>
             <input type="text" class="search-bar" placeholder="Search...">
             <div class="user-links">
@@ -17,20 +18,66 @@
                 <a href="cart.html">Cart</a>
             </div>
         </nav>
+
+        
+        <nav class="shopping-navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Checkout</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="slider">
-                <span class="slider-content" data-index="0" data-status="active">A</span>
-                <span class="slider-content" data-index="1" data-status="unknown">B</span>
-                <span class="slider-content" data-index="2" data-status="unknown">C</span>
-                <span class="slider-content" data-index="3" data-status="unknown">D</span>
+        <div class="bestproducts-slider">
+                <span class="slider-content" data-index="0" data-status="active">
+                    <div class="slider-index">01</div>
+                    <div class="slider-text">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </div>
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <div class="slider-buttons">
+                        <button>Shop Now</button>
+                    </div>
+                </span>
+
+
                 <div class="uibuttons">
                   <button id="prevButton" onclick="handlePrev()"><</button>
                   <button id="nextButton" onclick="handleNext()">></button>
             </div>
-        
+        </div>
+
+        <div class="categories-grid">
+            <div class="grid-content">
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/150" alt="">
+                    <h3>Category 1</h3>
+            </div>
+        </div>
+
+        <div class="discount-box">
+            <div class="discount-content">
+                <div class="discount-index">01</div>
+                <div class="discount-text">
+                    <h1>Discount</h1>
+                    <span>Category</p>
+                </div>
+                <div class="discount-price">
+                    <span class="og-price">S/40</span>
+                    <span class="discounted-price">S/60</span>
+                </div>
+        </div>
+
+
     </main>
+    
+
+
 </body>
 <script src="script.js"></script>
 </html>
