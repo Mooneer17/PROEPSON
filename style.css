@@ -3,12 +3,13 @@
 *{
     padding: 0%;
     margin: 0%;
-
+    overflow-x: hidden;
 }
 
 body{
     background-color: #ececec;
     font-family: 'Source Sans 3', sans-serif;
+
 }
 
 
@@ -25,8 +26,49 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 2rem;
 
 }
+
+.logo{
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+.search-bar{
+    display: flex;
+    flex:0.8
+
+}
+
+.user-links{
+    display: flex;
+    gap: 1rem;
+}
+
+.user-links a{
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+}
+
+.user-links a:hover{
+    color: rgb(100, 100, 100);
+}
+
+.brands{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1em;
+
+}
+
+.brands img{
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+}
+
 
 .shopping-navbar{
     width: 100%;
@@ -54,95 +96,127 @@ main{
     flex-direction: column;
 }
 
-.bestproducts-slider{
-    background-color: rgb(20, 20, 20);
-    color: white;
-    padding: 3rem;
-    box-shadow: 0 0 20px rgba(44, 44, 44, 0.7);
-}
 
-.slider-content{
+.slider {
     display: flex;
-    gap: 1rem;
-}
-
-.slider-index{
-    transform: translateX(70vw);
-    font-style: bold;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  .slide {
     position: absolute;
-    text-align: right;
-    font-size: 5rem;
-    font-weight: 200;
-}
-
-
-.slider-buttons button{
-    background-color: rgb(255, 255, 255);
-    border-radius: 3px;
-    color: rgb(20, 20, 20);
-    padding: 1rem;
-    font-size: medium;
-    font-style: italic;
-    cursor: pointer;
-
-
-}
-
-
-.slider-buttons #buy{
-    box-shadow: 0 0 20px rgba(214, 214, 214, 0.7);
-    border: none ;
-}
-
-
-.slider-buttons #cart{
-    border: white 1px solid;
-    box-shadow: 0 0 20px rgba(230, 230, 230, 0.7);
-    background-color: rgb(20, 20, 20);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    background-color: #1a1a1a;
+    animation: fadeOut 0.5s forwards;
     color: white;
-
-}
-
-.uibuttons{
+  }
+  
+  .slider-index{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 8rem;
+    font-style: italic;
+    font-weight: 1000;
+  }
+  
+  .slider-text{
+    padding: 2rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  
+    h1{
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+    slider-buttons{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .slider-buttons #buy{
+    background-color: #eeeeee;
+    color: rgb(14, 14, 14);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .slider-buttons #cart{
+    background-color: #1f1f1f;
+    color: rgb(243, 243, 243);
+    border: white 1px solid;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slide[data-status="active"] {
+    display: flex;
+    animation: fadeIn 0.8s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+  
+  
+  .uibuttons{
+    background-color: #1a1a1a;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
-
-    button{
-        background-color: rgb(255, 255, 255);
-        border-radius: 100px;
-        border: none;
-        cursor: pointer;
-        color: rgb(20, 20, 20);
-        padding: 1rem;
-        font-size: 3rem;
-        font-style: italic;
+    
+    
+  }
+  .uibuttons button {
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1a1a1a;
+    border: none;
+  
+    &:hover{
+      background-color: #2a2a2a;
     }
-}
-
-button:hover{
-    box-shadow: 0 0 20px rgba(214, 214, 214, 0.7);
-}
-
-
-
-
-.slider-text h1{
-    font-size: 3rem;
-    font-weight: 800;
-    font-style: italic;
-}
-
-.slider-content img{
-    border-radius: 8px;
-    flex: 1;
-}
-
-
-
-
-
-
+  }
+  
 
 
 
@@ -152,8 +226,6 @@ button:hover{
     gap: 1rem;
     margin: 1rem;
 }
-
-
 
 .discount-box{
     background-color: rgb(26, 26, 26);
@@ -225,6 +297,28 @@ button:hover{
 
 
 
+
+footer{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 1000;
+    font-stretch: expanded;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    font-size: 1rem;
+}
 
 
 
