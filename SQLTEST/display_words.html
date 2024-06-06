@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+        }
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product-list li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-container">
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="books">Books</option>
+        </select>
+        <button onclick="filterProducts()">Filter</button>
+    </div>
+    <ul class="product-list" id="product-list">
+        <li data-category="electronics">Smartphone</li>
+        <li data-category="electronics">Laptop</li>
+        <li data-category="clothing">T-shirt</li>
+        <li data-category="clothing">Jeans</li>
+        <li data-category="books">Novel</li>
+        <li data-category="books">Magazine</li>
+    </ul>
+    <script>
+        function filterProducts() {
+    const selectedCategory = document.getElementById('category').value;
+    const productList = document.getElementById('product-list');
+    const products = productList.getElementsByTagName('li');
+
+    for (let i = 0; i < products.length; i++) {
+        const productCategory = products[i].getAttribute('data-category');
+        if (selectedCategory === 'all' || productCategory === selectedCategory) {
+            products[i].style.display = 'list-item';
+        } else {
+            products[i].style.display = 'none';
+        }
+    }
+}
+
+    </script>
+</body>
+</html>
